@@ -170,7 +170,7 @@ img {
 /* Shared phone screenshot styling */
 
 .phone-shot {
-  max-width: 260px;        /* << smaller screenshots on desktop */
+  max-width: 260px;
   border-radius: 32px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
 }
@@ -301,7 +301,7 @@ img {
 }
 
 .phone-shot.small {
-  max-width: 220px;        /* slightly smaller for stacked images */
+  max-width: 220px;
   border-radius: 28px;
 }
 
@@ -321,6 +321,38 @@ img {
 
 .content-block.reverse {
   /* direction set in media query */
+}
+
+/* D. Home location section */
+
+.home-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-text {
+  max-width: 520px;
+}
+
+.home-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.home-gallery figure {
+  text-align: center;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
 /* Placeholder sections for later */
@@ -365,6 +397,12 @@ img {
   }
 }
 
+@media (max-width: 1024px) {
+  .home-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 720px) {
   .nav-links {
     display: none;
@@ -381,6 +419,10 @@ img {
 
   .phone-shot,
   .phone-shot.small {
-    max-width: 70vw;   /* let them grow a bit on small screens */
+    max-width: 70vw;
+  }
+
+  .home-gallery {
+    grid-template-columns: 1fr;
   }
 }
