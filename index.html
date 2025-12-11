@@ -34,8 +34,7 @@
           </div>
           <h1>ShopSense</h1>
           <p class="tagline">
-            A simple way to remember what you need to buy, right when nearby
-            stores can help.
+            Remember what to buy at the right place and time.
           </p>
           <p class="hero-body">
             ShopSense keeps your to-buy list with you and turns it into smart,
@@ -55,7 +54,7 @@
           <img
             src="images/home.png"
             alt="ShopSense home screen"
-            class="phone-shot"
+            class="home-phone-shot"
           />
         </div>
       </div>
@@ -66,7 +65,7 @@
       <div class="section-header">
         <h2>Overview of the ShopSense app</h2>
         <p class="section-lead">
-          ShopSense is a location aware shopping companion. It connects your
+          ShopSense is a location aware shopping companion that connects your
           to-buy list with the places you pass in daily life.
         </p>
       </div>
@@ -76,23 +75,29 @@
           <div class="overview-card">
             <h3>The problem</h3>
             <p>
-              Many people keep to-buy lists, but they often forget to check them
-              when it matters. You might pass a shop that sells an item you need
-              and only remember it later at home. This leads to missed tasks and
-              extra trips. Most reminder apps work by time, not by location, so
-              they cannot help at the right moment.
+              Many people keep to-buy lists on their phones or in notebooks. Yet
+              it is easy to forget to check the list when you pass a shop that
+              sells something you need, which leads to missed tasks and extra
+              trips.
+            </p>
+            <p>
+              Most reminder apps work on time only, not on place, so they cannot
+              help at the right moment.
             </p>
           </div>
 
           <div class="overview-card">
             <h3>The ShopSense solution</h3>
             <p>
-              ShopSense gives smart, location based reminders. You create a
-              to-buy list, set your home location, and turn on Shopping Mode
-              when heading out. The app quietly checks nearby stores that match
-              your list and alerts you when you are close to a useful shop. You
-              can control reminder frequency so notifications stay timely and
-              manageable.
+              ShopSense gives simple, location based shopping reminders. You
+              create a to-buy list, set your home location, and turn on Shopping
+              Mode when you head out.
+            </p>
+            <p>
+              The app quietly looks for nearby stores that match the categories
+              on your list and alerts you when you are close to a useful shop.
+              You control how often it speaks to you so notifications stay
+              helpful and not noisy.
             </p>
           </div>
         </div>
@@ -106,7 +111,7 @@
                 Group items by category such as Bakery, Supermarket, or
                 Pharmacy.
               </li>
-              <li>Set your home location as a safe starting point.</li>
+              <li>Set your home location as a starting point for reminders.</li>
               <li>
                 Turn on Shopping Mode to receive nearby store suggestions.
               </li>
@@ -128,8 +133,101 @@
       </div>
     </section>
 
+    <!-- C. Your to-buy list -->
+    <section id="tobuy-list" class="section section-gray">
+      <div class="section-header">
+        <h2>Your to-buy list</h2>
+        <p class="section-lead">
+          Learn how to add items, change them, remove them, and mark them as
+          done.
+        </p>
+      </div>
+
+      <!-- C1. Add an item -->
+      <div id="add-item" class="content-block">
+        <div class="content-main">
+          <h3>How to add an item to the list</h3>
+          <ol class="steps">
+            <li>
+              On the home screen tap the <strong>Add Item</strong> button at the
+              bottom right.
+            </li>
+            <li>
+              In the <strong>Add Item</strong> window type the item
+              <strong>Name</strong>.
+            </li>
+            <li>
+              Enter the <strong>Quantity</strong> and choose a
+              <strong>Category</strong> such as Bakery or Pharmacy.
+            </li>
+            <li>
+              Tap <strong>Confirm</strong>. The item appears in your list.
+            </li>
+          </ol>
+          <p class="tip">
+            Tip. Start with a few daily items like bread, milk, or medicine and
+            group them by category.
+          </p>
+        </div>
+
+        <div class="content-media">
+          <figure
+            class="phone-stack"
+            aria-label="Empty list and Add Item dialog"
+          >
+            <img
+              src="images/home_with_empty_list.png"
+              alt="Home screen showing an empty to-buy list"
+              class="phone-shot small base"
+            />
+            <img
+              src="images/add_item.png"
+              alt="Add Item dialog"
+              class="phone-shot small overlay"
+            />
+          </figure>
+        </div>
+      </div>
+
+      <!-- C2. Edit or delete an item -->
+      <div id="edit-delete" class="content-block reverse">
+        <div class="content-main">
+          <h3>How to edit, delete, or check off an item</h3>
+
+          <h4>Edit an item</h4>
+          <ol class="steps">
+            <li>Find the item you want to change in the list.</li>
+            <li>Tap the pencil icon next to the item.</li>
+            <li>Update the name, quantity, or category, then save.</li>
+          </ol>
+
+          <h4>Delete an item</h4>
+          <ol class="steps">
+            <li>Tap the bin icon next to the item.</li>
+            <li>Confirm the delete action if the app asks.</li>
+          </ol>
+
+          <h4>Mark an item as done</h4>
+          <ol class="steps">
+            <li>Tap the check box on the left side of the item.</li>
+            <li>
+              The item is marked as bought so you can see what you have already
+              picked up.
+            </li>
+          </ol>
+        </div>
+
+        <div class="content-media">
+          <img
+            src="images/tobuy_list.png"
+            alt="To-buy list with items, check boxes, edit and delete icons"
+            class="phone-shot"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Placeholder sections for later content -->
-    <section id="tobuy-list" class="section placeholder"></section>
     <section id="home-location" class="section placeholder"></section>
     <section id="shopping-mode" class="section placeholder"></section>
     <section id="faq" class="section placeholder"></section>

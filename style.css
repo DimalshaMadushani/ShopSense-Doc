@@ -167,7 +167,15 @@ img {
   max-width: 320px;
 }
 
+/* Shared phone screenshot styling */
+
 .phone-shot {
+  max-width: 260px;        /* << smaller screenshots on desktop */
+  border-radius: 32px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+}
+
+.home-phone-shot {
   border-radius: 32px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
 }
@@ -232,6 +240,89 @@ img {
   margin-top: 0.35rem;
 }
 
+/* C. Your to-buy list section */
+
+.section-gray {
+  background-color: #f8fafc;
+}
+
+.content-block {
+  max-width: 1120px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.content-block:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-main {
+  flex: 1.4;
+}
+
+.content-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.steps {
+  padding-left: 1.25rem;
+  margin-top: 0.75rem;
+  color: #4b5563;
+}
+
+.steps li + li {
+  margin-top: 0.35rem;
+}
+
+.tip {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.content-main h3 {
+  margin-bottom: 0.4rem;
+}
+
+.content-main h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.phone-stack {
+  position: relative;
+  display: inline-block;
+}
+
+.phone-shot.small {
+  max-width: 220px;        /* slightly smaller for stacked images */
+  border-radius: 28px;
+}
+
+.phone-shot.small.base {
+  position: relative;
+  z-index: 1;
+}
+
+.phone-shot.small.overlay {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  z-index: 2;
+}
+
+/* Reverse layout on wide screens */
+
+.content-block.reverse {
+  /* direction set in media query */
+}
+
 /* Placeholder sections for later */
 
 .placeholder {
@@ -263,6 +354,15 @@ img {
   .hero-actions {
     align-items: flex-start;
   }
+
+  .content-block {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .content-block.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 @media (max-width: 720px) {
@@ -277,5 +377,10 @@ img {
 
   .overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .phone-shot,
+  .phone-shot.small {
+    max-width: 70vw;   /* let them grow a bit on small screens */
   }
 }
