@@ -158,11 +158,6 @@ img {
   background-color: #1d4ed8;
 }
 
-.download-note {
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
 .hero-image {
   max-width: 320px;
 }
@@ -302,6 +297,12 @@ img {
   color: #6b7280;
 }
 
+/* Mark content blocks that should stay stacked at all widths */
+
+.content-block.stack {
+  flex-direction: column;
+}
+
 /* To-buy list phone stack */
 
 .phone-stack {
@@ -326,10 +327,10 @@ img {
   z-index: 2;
 }
 
-/* Reverse layout on wide screens */
+/* Reverse layout on wide screens (for non-stacked blocks) */
 
 .content-block.reverse {
-  /* direction set in media query */
+  /* direction set in media query for desktop where needed */
 }
 
 /* D. Home location layout */
@@ -410,18 +411,14 @@ img {
     align-items: flex-start;
   }
 
-  .content-block {
+  /* Side by side only where we still want it (C section) */
+  .content-block:not(.stack) {
     flex-direction: row;
     align-items: center;
   }
 
-  .content-block.reverse {
+  .content-block.reverse:not(.stack) {
     flex-direction: row-reverse;
-  }
-
-  .home-layout {
-    flex-direction: row;
-    align-items: flex-start;
   }
 }
 
