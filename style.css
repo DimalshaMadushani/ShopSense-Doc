@@ -175,6 +175,11 @@ img {
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
 }
 
+.phone-shot.tiny {
+  max-width: 190px;
+  border-radius: 28px;
+}
+
 .home-phone-shot {
   border-radius: 32px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
@@ -240,11 +245,13 @@ img {
   margin-top: 0.35rem;
 }
 
-/* C. Your to-buy list section */
+/* Generic section variants */
 
 .section-gray {
   background-color: #f8fafc;
 }
+
+/* Content blocks (used in sections C and E) */
 
 .content-block {
   max-width: 1120px;
@@ -269,6 +276,16 @@ img {
   justify-content: center;
 }
 
+.content-main h3 {
+  margin-bottom: 0.4rem;
+}
+
+.content-main h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
 .steps {
   padding-left: 1.25rem;
   margin-top: 0.75rem;
@@ -285,15 +302,7 @@ img {
   color: #6b7280;
 }
 
-.content-main h3 {
-  margin-bottom: 0.4rem;
-}
-
-.content-main h4 {
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-}
+/* To-buy list phone stack */
 
 .phone-stack {
   position: relative;
@@ -323,7 +332,7 @@ img {
   /* direction set in media query */
 }
 
-/* D. Home location section */
+/* D. Home location layout */
 
 .home-layout {
   max-width: 1120px;
@@ -334,25 +343,39 @@ img {
 }
 
 .home-text {
-  max-width: 520px;
+  flex: 1.2;
 }
 
-.home-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: flex-start;
-  justify-items: center;
+.home-media {
+  flex: 1;
 }
 
-.home-gallery figure {
+.phone-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.phone-grid.wide {
+  justify-content: space-between;
+}
+
+.phone-figure {
   text-align: center;
+  max-width: 190px;
 }
 
-.caption {
+.phone-figure figcaption {
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: #6b7280;
+}
+
+/* E. Shopping mode */
+
+.bullet-list {
+  list-style: disc;
 }
 
 /* Placeholder sections for later */
@@ -395,11 +418,10 @@ img {
   .content-block.reverse {
     flex-direction: row-reverse;
   }
-}
 
-@media (max-width: 1024px) {
-  .home-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-layout {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -418,11 +440,12 @@ img {
   }
 
   .phone-shot,
-  .phone-shot.small {
+  .phone-shot.small,
+  .phone-shot.tiny {
     max-width: 70vw;
   }
 
-  .home-gallery {
-    grid-template-columns: 1fr;
+  .phone-grid {
+    justify-content: center;
   }
 }
